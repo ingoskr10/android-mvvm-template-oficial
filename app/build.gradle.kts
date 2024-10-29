@@ -14,7 +14,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -83,6 +83,8 @@ dependencies {
     implementation(libs.google.android.gms)
     implementation(libs.insert.koin)
     implementation(libs.google.firebase.remote)
+    implementation(libs.greenrobot.eventBus)
+    implementation(libs.androidx.room)
 
 
     //testImplementation

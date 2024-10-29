@@ -29,9 +29,9 @@ class UsuarioRepositorio(
         }
     }
 
-    suspend fun iniciarSesion(correo: String, contraseña: String): Result<Boolean> =
+    suspend fun iniciarSesion(correo: String, contrasena: String): Result<Boolean> =
         withContext(Dispatchers.IO) {
-            servicioApi.iniciarSesion(correo, contraseña)
+            servicioApi.iniciarSesion(correo, contrasena)
         }
 }
 

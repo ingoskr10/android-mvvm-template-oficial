@@ -1,6 +1,7 @@
 package com.ingoskr.template_oficial.utilidades
 
-import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.eventbus.EventBus
+import org.greenrobot.eventbus.EventBus
+
 
 object EventoBus {
     private val bus = EventBus.getDefault()

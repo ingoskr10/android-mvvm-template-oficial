@@ -22,6 +22,7 @@ playServiceLocation = "21.3.0"
 koin = "3.5.3"
 firebaseCrashlyticsBuildtools = "3.0.2"
 remoteConfig = "22.0.1"
+eventBus = "3.3.1"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -44,6 +45,8 @@ google-android-gms = { group = "com.google.android.gms", name = "play-services-l
 insert-koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 google-firebase-remote = { group = "com.google.firebase", name = "firebase-config-ktx", version.ref = "remoteConfig"}
+greenrobot-eventBus = { group = "org.greenrobot", name = "eventbus", version.ref = "eventBus"}
+androidx-room = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

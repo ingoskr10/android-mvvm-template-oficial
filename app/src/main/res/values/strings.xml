@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Template-oficial</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="contraseña">Contraseña</string>
 </resources>

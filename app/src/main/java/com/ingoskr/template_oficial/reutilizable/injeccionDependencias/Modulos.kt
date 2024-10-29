@@ -4,13 +4,20 @@ import android.content.Context
 import androidx.room.Room
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.Volley
+import com.ingoskr.template_oficial.Presentacion.viewmodel.InicioSesionViewModel
+import com.ingoskr.template_oficial.entidades.ServicioApi
+import com.ingoskr.template_oficial.implementaciones.ServicioApiImpl
+import com.ingoskr.template_oficial.repositorios.UsuarioRepositorio
+import com.ingoskr.template_oficial.reutilizable.Volley.SendVolley
 import com.ingoskr.template_oficial.reutilizable.room.BaseDatos
 import org.koin.android.ext.koin.androidContext
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val moduloRed = module {
     single { proveerVolleyQueue(androidContext()) }
     single<ServicioApi> { ServicioApiImpl(get()) }
+    single { SendVolley(androidContext()) }
 }
 
 // Módulo de base de datos
@@ -21,7 +28,7 @@ val moduloBaseDatos = module {
 
 // Módulo de repositorios
 val moduloRepositorios = module {
-    single { UsuarioRepositorio(get(), get(), get()) }
+    factory { UsuarioRepositorio(get(), get(), get()) }
 }
 
 // Módulo de ViewModels
