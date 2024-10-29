@@ -33,7 +33,7 @@ val moduloRepositorios = module {
 
 // Módulo de ViewModels
 val moduloViewModels = module {
-    viewModel { InicioSesionViewModel(get()) }
+    factory { InicioSesionViewModel(get()) }
 }
 
 private fun proveerVolleyQueue(context: Context): RequestQueue =

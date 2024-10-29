@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ingoskr.template_oficial.repositorios.UsuarioRepositorio
-import com.ingoskr.template_oficial.reutilizable.room.entidades.Usuario
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 
