@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Templateoficial"
         tools:targetApi="31">
         <activity
-            android:name=".Presentacion.vista.InicioSesionActivity"
+            android:name=".Presentacion.Inicio.vista.InicioSesionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

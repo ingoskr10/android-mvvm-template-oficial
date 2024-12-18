@@ -1,4 +1,4 @@
-package com.ingoskr.template_oficial.reutilizable.room.entidades
+package com.ingoskr.template_oficial.Reutilizable.room.entidades
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

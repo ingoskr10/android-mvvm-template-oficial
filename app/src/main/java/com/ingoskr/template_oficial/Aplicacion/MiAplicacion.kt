@@ -1,12 +1,12 @@
 package com.ingoskr.template_oficial.Aplicacion
 
-import android.app.Application
-import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
-import com.ingoskr.template_oficial.reutilizable.injeccionDependencias.moduloBaseDatos
-import com.ingoskr.template_oficial.reutilizable.injeccionDependencias.moduloRed
-import com.ingoskr.template_oficial.reutilizable.injeccionDependencias.moduloRepositorios
-import com.ingoskr.template_oficial.reutilizable.injeccionDependencias.moduloViewModels
+import com.ingoskr.template_oficial.Reutilizable.injeccionDependencias.customModulo
+import com.ingoskr.template_oficial.Reutilizable.injeccionDependencias.firebaseModulo
+import com.ingoskr.template_oficial.Reutilizable.injeccionDependencias.moduloRed
+import com.ingoskr.template_oficial.Reutilizable.injeccionDependencias.moduloRepositorios
+import com.ingoskr.template_oficial.Reutilizable.injeccionDependencias.moduloViewModels
+import com.ingoskr.template_oficial.Reutilizable.injeccionDependencias.proveerBaseDatos
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -15,17 +15,18 @@ class MiAplicacion : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         inicializarKoin()
-        //ConfiguracionRemota.inicializar()
     }
 
     private fun inicializarKoin() {
         startKoin {
             androidContext(this@MiAplicacion)
             modules(
-//                moduloRed,
-                moduloBaseDatos,
+                proveerBaseDatos,
                 moduloRepositorios,
-//                moduloViewModels
+                customModulo,
+                firebaseModulo,
+                moduloRed,
+                moduloViewModels
             )
         }
     }

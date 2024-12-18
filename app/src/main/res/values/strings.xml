@@ -3,4 +3,7 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="correo">Correo electrónico</string>
     <string name="contraseña">Contraseña</string>
+    <string name="api_key">#</string>
+    <string name="application_id">#</string>
+    <string name="project_id">#</string>
 </resources>

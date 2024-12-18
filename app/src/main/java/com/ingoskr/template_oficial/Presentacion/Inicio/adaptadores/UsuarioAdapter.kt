@@ -1,4 +1,4 @@
-package com.ingoskr.template_oficial.Presentacion.adaptadores
+package com.ingoskr.template_oficial.Presentacion.Inicio.adaptadores
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ingoskr.template_oficial.databinding.ItemUsuarioBinding
-import com.ingoskr.template_oficial.reutilizable.room.entidades.Usuario
+import com.ingoskr.template_oficial.Reutilizable.room.entidades.Usuario
 
 class UsuarioAdapter : ListAdapter<Usuario, UsuarioAdapter.UsuarioViewHolder>(UsuarioDiffCallback()) {
 
