@@ -22,31 +22,65 @@ playServiceLocation = "21.3.0"
 koin = "3.5.3"
 firebaseCrashlyticsBuildtools = "3.0.2"
 remoteConfig = "22.0.1"
-eventBus = "3.3.1"
+
+[bundles]
+ui = [
+    "androidx-core-ktx",
+    "androidx-appcompat",
+    "material",
+    "androidx-activity",
+    "androidx-constraintlayout",
+    "github-bumptech-glide",
+    "androidx-multidex",
+    "gson",
+]
+bd = [
+    "androidx-room-runtime",
+    "androidx-room",
+    "insert-koin",
+    "volley"
+]
+ksp = ["androidx-room-compiler"]
+firebase = [
+    "google-firebase-auth",
+    "google-firebase-firestore",
+    "google-android-gms",
+    "firebase-crashlytics-buildtools",
+    "google-firebase-remote"
+]
+testImplementation = ["junit","mockk"]
+testAndroidImplementation = ["androidx-junit","androidx-espresso-core"]
+
+
 [libraries]
+# UI
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 github-bumptech-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 androidx-multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex" }
-volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
-mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
-androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
-androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room"}
+
+# Firebase
 google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth"}
 google-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firestore"}
 google-android-gms = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServiceLocation"}
-insert-koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 google-firebase-remote = { group = "com.google.firebase", name = "firebase-config-ktx", version.ref = "remoteConfig"}
-greenrobot-eventBus = { group = "org.greenrobot", name = "eventbus", version.ref = "eventBus"}
+
+# BD
+insert-koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin"}
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room"}
 androidx-room = { group = "androidx.room", name = "room-ktx", version.ref = "room"}
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

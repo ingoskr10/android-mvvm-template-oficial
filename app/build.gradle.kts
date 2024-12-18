@@ -65,32 +65,10 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.github.bumptech.glide)
-    implementation(libs.androidx.multidex)
-    implementation(libs.volley)
-    implementation(libs.gson)
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.firebase.crashlytics.buildtools)
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.google.firebase.auth)
-    implementation(libs.google.firebase.firestore)
-    implementation(libs.google.android.gms)
-    implementation(libs.insert.koin)
-    implementation(libs.google.firebase.remote)
-    implementation(libs.greenrobot.eventBus)
-    implementation(libs.androidx.room)
-
-
-    //testImplementation
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    //mockk
-    testImplementation(libs.mockk)
+    implementation(libs.bundles.ui)
+    implementation(libs.bundles.bd)
+    implementation(libs.bundles.firebase)
+    ksp(libs.bundles.ksp)
+    testImplementation(libs.bundles.testImplementation)
+    androidTestImplementation(libs.bundles.testAndroidImplementation)
 }
